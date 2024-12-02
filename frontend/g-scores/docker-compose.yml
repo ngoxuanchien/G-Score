@@ -1,0 +1,11 @@
+services:
+  web:
+    container_name: g-score-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: g-score-web
+    environment:
+      REACT_APP_API_URL: http://localhost:8080
+    ports:
+      - "80:3000"

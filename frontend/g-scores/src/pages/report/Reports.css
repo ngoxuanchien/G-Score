@@ -1,0 +1,26 @@
+.reports-container {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.scores-table {
+    margin-top: 20px;
+    width: 500px;
+    border-collapse: collapse;
+}
+
+.scores-table th,
+.scores-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.scores-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}

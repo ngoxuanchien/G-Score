@@ -1,0 +1,29 @@
+services:
+  postgressql:
+    image: postgres
+    container_name: postgressql
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: gscore
+      POSTGRES_PASSWORD: gscore
+      POSTGRES_DB: gscore
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+  g-score:
+    image: g-score
+    container_name: g-score
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      DATASOURCE_URL: jdbc:postgresql://postgressql:5432/gscore
+      DATASOURCE_USERNAME: gscore
+      DATASOURCE_PASSWORD: gscore
+    depends_on:
+      - postgressql

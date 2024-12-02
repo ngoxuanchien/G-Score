@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gscore
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/gscore}
+    username: ${DATASOURCE_USERNAME:gscore}
+    password: ${DATASOURCE_PASSWORD:gscore}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 4096
+        generate_statistics: true
+        order_inserts: true
+server:
+  port: 8080

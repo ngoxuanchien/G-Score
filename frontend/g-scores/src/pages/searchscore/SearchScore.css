@@ -1,0 +1,35 @@
+.container {
+    padding: 20px;
+}
+
+.input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 500px;
+}
+
+.submit-button {
+   padding: 10px 20px;
+   background-color: black;
+   color: white;
+   border: 1px solid black;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.scores-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.scores-table th,
+.scores-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.scores-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
